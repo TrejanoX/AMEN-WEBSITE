@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adrian Gabriel V. Amen · Kid.Up Culture Model</title>
+  <meta name="description" content="Personal website of Adrian Gabriel V. Amen, model for Kid.Up Culture.">
+  <meta name="theme-color" content="#8b1520">
+  <link rel="icon" href="logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700&family=Pacifico&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Back to top">Kid.Up</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#dreamers">Dreamers Jersey</a>
+      <a href="#basic">Basic Collection</a>
+      <a href="#travel">Travel</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="hero__hello">Hi, I'm</p>
+        <h1 class="hero__name">Adrian Gabriel V. Amen</h1>
+        <p class="hero__type" aria-live="polite"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="#dreamers">See me in the jersey</a>
+          <a class="btn btn--ghost" href="#travel">Where I've been</a>
+        </div>
+      </div>
+
+      <div class="hero__photo" id="tilt">
+        <div class="arch">
+          <img src="profile.jpg" alt="Adrian Gabriel V. Amen smiling, wearing a cream embroidered barong and glasses" width="1200" height="1600">
+        </div>
+        <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <circle cx="100" cy="100" r="98" fill="#0a0a0a"/>
+          <text><textPath href="#circ" startOffset="0">KID.UP CULTURE • MODEL • KID.UP CULTURE • MODEL •</textPath></text>
+          <text x="100" y="124" text-anchor="middle" class="badge__4">4</text>
+        </svg>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>4ward . 4thekids . 4life</span><span>4ward . 4thekids . 4life</span><span>4ward . 4thekids . 4life</span><span>4ward . 4thekids . 4life</span>
+        <span>4ward . 4thekids . 4life</span><span>4ward . 4thekids . 4life</span><span>4ward . 4thekids . 4life</span><span>4ward . 4thekids . 4life</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <h2 class="h2">What drives me</h2>
+      <div class="about__grid">
+        <article class="panel panel--interest">
+          <h3>Interest</h3>
+          <p class="panel__big">Exploring my environments.</p>
+          <p>New streets, shorelines and hidden pools. I like seeing a place up close and finding out what makes it different.</p>
+          <div class="compass" id="compass" aria-hidden="true">
+            <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/><g class="needle"><polygon points="60,12 70,60 50,60" fill="#c8622b"/><polygon points="60,108 70,60 50,60" fill="currentColor"/></g><circle cx="60" cy="60" r="5" fill="#f2dcd7" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Move your mouse. The needle follows.</span>
+          </div>
+        </article>
+
+        <article class="panel panel--skill">
+          <h3>Skill</h3>
+          <ul>
+          <li>Cooking</li>
+          <li>Dancing</li>
+          <li>Troubleshooting of Computers</li>
+          <li>Editing Photos and Videos</li>
+          </ul>
+          <p class="panel__big">Learning new skills.</p>
+          <p>My best skill is picking up new ones. Tap the button and watch me level up.</p>
+          <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="meter"><div class="meter__fill" id="meterFill"></div></div>
+          <div class="meter__row">
+            <button class="btn btn--solid" id="levelBtn" type="button">Learn something new</button>
+            <p class="meter__lvl">Level <strong id="lvl">1</strong><span id="lvlTitle"> · Beginner</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section class="hobbies" id="hobbies">
+      <h2 class="h2">Hobbies</h2>
+      <p class="lead">Three things I do whenever I'm off the clock. Pick one.</p>
+      <div class="hobby-tabs" role="tablist" aria-label="Hobbies">
+        <button role="tab" aria-selected="true" data-hobby="basketball" id="tab-basketball" aria-controls="hobbyPanel">Basketball</button>
+        <button role="tab" aria-selected="false" data-hobby="gaming" id="tab-gaming" aria-controls="hobbyPanel">Gaming</button>
+        <button role="tab" aria-selected="false" data-hobby="traveling" id="tab-traveling" aria-controls="hobbyPanel">Traveling</button>
+      </div>
+      <div class="hobby-panel" id="hobbyPanel" role="tabpanel" aria-live="polite">
+        <div class="hobby-panel__icon" id="hobbyIcon"></div>
+        <div>
+          <h3 id="hobbyTitle"></h3>
+          <p id="hobbyText"></p>
+          <a class="btn btn--ghost-light" id="hobbyLink" href="#travel" hidden>Open my travel photos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND -->
+    <section class="brand">
+      <div class="brand__logos">
+        <img src="logo.jpg" alt="Kid.Up Culture logo in red on black" width="500" height="500" loading="lazy">
+        <img src="kid-up-logo.jpg" alt="Kid.Up script logo in cream on red" width="1080" height="1350" loading="lazy">
+      </div>
+      <div class="brand__copy">
+        <h2 class="h2">I model for Kid.Up Culture</h2>
+        <p class="brand__quote">For the love of the kids.</p>
+        <p>Kid.Up is a t-shirt shop with two sides: a baseball-script jersey line and a handwritten Basic Collection. Here is what I wear for each.</p>
+      </div>
+    </section>
+
+    <!-- DREAMERS -->
+    <section class="collection collection--dreamers" id="dreamers">
+      <div class="collection__head">
+        <h2 class="h2">Dreamers Jersey</h2>
+        <p class="lead">Black jersey with white stripes, the Kid.Up wing mark, and a big 4 on the back. Front on the left, back on the right.</p>
+      </div>
+      <figure class="overview">
+        <img src="kid-up-shirt.jpg" alt="Kid.Up Culture Dreamers jersey, front and back" width="960" height="960" loading="lazy">
+      </figure>
+      <h3 class="strip-title">Me in the jersey</h3>
+      <div class="strip" data-group="dreamers">
+        <button class="shot" data-lb data-group="dreamers" data-src="gab1.jpg" data-cap="Dreamers Jersey, front"><img src="gab1.jpg" alt="Gab standing against a grey wall in the Dreamers jersey and grey shorts" loading="lazy"></button>
+        <button class="shot" data-lb data-group="dreamers" data-src="gab2.jpg" data-cap="Dreamers Jersey, three-quarter pose"><img src="gab2.jpg" alt="Gab looking to the side in the Dreamers jersey" loading="lazy"></button>
+        <button class="shot" data-lb data-group="dreamers" data-src="gab3.jpg" data-cap="Dreamers Jersey, back with the 4"><img src="gab3.jpg" alt="Back of the Dreamers jersey showing the number 4" loading="lazy"></button>
+        <button class="shot" data-lb data-group="dreamers" data-src="gab4.jpg" data-cap="4ward . 4thekids . 4life"><img src="gab4.jpg" alt="Gab riding an escalator, back of the jersey visible" loading="lazy"></button>
+        <button class="shot" data-lb data-group="dreamers" data-src="gab5.jpg" data-cap="Dreamers Jersey, low angle"><img src="gab5.jpg" alt="Low-angle portrait in the Dreamers jersey by a staircase" loading="lazy"></button>
+      </div>
+    </section>
+
+    <!-- BASIC COLLECTION -->
+    <section class="collection collection--basic" id="basic">
+      <div class="collection__head">
+        <h2 class="h2">Basic Collection</h2>
+        <p class="lead">Black tees printed in handwritten rust-orange. "Kid.Up Culture" on the front, "For the love of the kids" on the back.</p>
+      </div>
+      <figure class="overview">
+        <img src="basic-collection.jpg" alt="Kid.Up Culture Basic Collection black tee, front and back" width="1600" height="1600" loading="lazy">
+      </figure>
+      <h3 class="strip-title">Me in the Basic tee</h3>
+      <div class="strip" data-group="basic">
+        <button class="shot" data-lb data-group="basic" data-src="gabculture1.jpg" data-cap="Basic Collection, front"><img src="gabculture1.jpg" alt="Gab in the Basic Collection tee in front of a red wall" loading="lazy"></button>
+        <button class="shot" data-lb data-group="basic" data-src="gabculture2.jpg" data-cap="For the love of the kids"><img src="gabculture2.jpg" alt="Back of the Basic tee reading For the love of the kids" loading="lazy"></button>
+        <button class="shot" data-lb data-group="basic" data-src="gabculture3.jpg" data-cap="Basic Collection, back detail"><img src="gabculture3.jpg" alt="Gab walking along a yellow railing, back print visible" loading="lazy"></button>
+        <button class="shot" data-lb data-group="basic" data-src="gabculture4.jpg" data-cap="Basic Collection, front print"><img src="gabculture4.jpg" alt="Gab looking down at the front print of the Basic tee" loading="lazy"></button>
+      </div>
+    </section>
+
+    <!-- TRAVEL -->
+    <section class="travel" id="travel">
+      <h2 class="h2">Traveling</h2>
+      <p class="lead">Streams, coconut groves, beaches and mangroves. Tap a photo to open it.</p>
+      <div class="masonry">
+        <button class="tile" data-lb data-group="travel" data-src="travel1.jpg" data-cap="A small waterfall and swimming pool"><img src="travel1.jpg" alt="Friends swimming below a small waterfall in a rocky stream" loading="lazy"></button>
+        <button class="tile" data-lb data-group="travel" data-src="travel2.jpg" data-cap="Coconut grove by the sea"><img src="travel2.jpg" alt="Tall coconut palms with the sea behind them" loading="lazy"></button>
+        <button class="tile" data-lb data-group="travel" data-src="travel3.jpg" data-cap="Shade, loungers and a calm lagoon"><img src="travel3.jpg" alt="Palm trees and wooden loungers on a white-sand beach" loading="lazy"></button>
+        <button class="tile" data-lb data-group="travel" data-src="travel4.jpg" data-cap="Palms and a pebble shore"><img src="travel4.jpg" alt="Palm trees over a pebble beach and blue sea" loading="lazy"></button>
+        <button class="tile" data-lb data-group="travel" data-src="travel5.jpg" data-cap="Clear water and outrigger boats"><img src="travel5.jpg" alt="Clear turquoise pool beside a channel of outrigger boats" loading="lazy"></button>
+        <button class="tile" data-lb data-group="travel" data-src="travel6.jpg" data-cap="Under the mangrove canopy"><img src="travel6.jpg" alt="Looking up through a dense mangrove forest" loading="lazy"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="kid-up-logo.jpg" alt="" width="1080" height="1350" loading="lazy">
+    <div>
+      <p class="footer__name">Adrian Gabriel V. Amen</p>
+      <p>Model, Kid.Up Culture. 4ward . 4thekids . 4life</p>
+      <a href="#top" class="btn btn--ghost-light">Back to the top</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb__close" id="lbClose" aria-label="Close photo">&times;</button>
+    <button class="lb__nav lb__prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb__nav lb__next" id="lbNext" aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
